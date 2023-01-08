@@ -1,12 +1,12 @@
 import { GlobalStyle } from './styles/global'
-import { SignIn } from './pages/SignIn '
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
+import { ListClinics } from './pages/ListClinics'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <SignIn />
+      <ListClinics />
       <GlobalStyle />
     </ThemeProvider>
   )
