@@ -1,9 +1,9 @@
-import { Header } from "../../components/Header";
+import { Header } from '../../components/Header'
 
-export function SignIn () {
+export function SignIn() {
   return (
     <>
-      <Header/>
+      <Header />
       <h1>SignIn </h1>
     </>
   )
