@@ -17,6 +17,7 @@ export const ContentBox = styled.div`
   justify-content: space-between;
   display: flex;
   width: 100%;
+  align-items: center;
 `
 export const TextPosition = styled.p`
   font-family: 'Inter';
@@ -86,4 +87,13 @@ export const TextFloatingBox = styled.p`
   line-height: 19px;
 
   color: ${(props) => props.theme['blue-100']};
+`
+export const ButtonBox = styled.button`
+  background: transparent;
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  transition: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
 `
