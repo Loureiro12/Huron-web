@@ -1,4 +1,5 @@
 import { Box } from '../../components/Box'
+import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
 import { Container, Content, ContentBox, TextPosition, Text } from './styles'
 
@@ -8,6 +9,7 @@ export function ListClinics() {
       <Header />
       <Container>
         <Content>
+          <Button text="Criar nova" />
           <Box style={{ mg: '2.75rem 0rem 1.375rem 0rem' }}>
             <ContentBox>
               <TextPosition>01</TextPosition>
