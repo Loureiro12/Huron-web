@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const ButtonContainer = styled.button`
+export interface ButtonStylesType {
+  mg?: string
+}
+
+export const ButtonContainer = styled.button<ButtonStylesType>`
   background: ${(props) => props.theme['blue-100']};
   border-radius: 8px;
   outline: 0;
@@ -9,6 +13,7 @@ export const ButtonContainer = styled.button`
   border: 0;
   padding: 0px 42px;
   transition: 0.4s;
+  margin: ${({ mg }) => mg};
 
   p {
     font-family: 'Inter';

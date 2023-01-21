@@ -1,13 +1,14 @@
 import { ButtonHTMLAttributes } from 'react'
-import { ButtonContainer } from './styles'
+import { ButtonContainer, ButtonStylesType } from './styles'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
+  styleButton?: ButtonStylesType
 }
 
-export function Button({ text, ...rest }: ButtonProps) {
+export function Button({ text, styleButton, ...rest }: ButtonProps) {
   return (
-    <ButtonContainer {...rest}>
+    <ButtonContainer {...rest} mg={styleButton?.mg}>
       <p>{text}</p>
     </ButtonContainer>
   )
