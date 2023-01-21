@@ -3,6 +3,7 @@ import { CreateClinic } from '../pages/CreateClinic'
 import { ListClinics } from '../pages/ListClinics'
 import { MedicalRecord } from '../pages/MedicalRecord'
 import { SalesPage } from '../pages/SalesPage'
+import { SignIn } from '../pages/SignIn '
 
 export function AppRoutes() {
   return (
@@ -13,6 +14,7 @@ export function AppRoutes() {
         <Route path="/medical-record" element={<MedicalRecord />} />
 
         <Route path="/" element={<SalesPage />} />
+        <Route path="/login" element={<SignIn />} />
       </Route>
     </Routes>
   )

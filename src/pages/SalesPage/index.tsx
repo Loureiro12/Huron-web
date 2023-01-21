@@ -15,8 +15,9 @@ import {
 
 export function SalesPage() {
   const navigate = useNavigate()
+
   const handleOnClick = useCallback(
-    () => navigate('/signin', { replace: true }),
+    () => navigate('/login', { replace: true }),
     [navigate],
   )
 
