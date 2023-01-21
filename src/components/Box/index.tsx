@@ -7,5 +7,9 @@ interface BoxType {
 }
 
 export function Box({ children, style }: BoxType) {
-  return <BoxContainer mg={style?.mg}>{children}</BoxContainer>
+  return (
+    <BoxContainer mg={style?.mg} bg={style?.bg}>
+      {children}
+    </BoxContainer>
+  )
 }

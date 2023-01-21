@@ -1,12 +1,16 @@
 import { GlobalStyle } from './styles/global'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
-import { ListClinics } from './pages/ListClinics'
+import { BrowserRouter } from 'react-router-dom'
+
+import { Router } from './router'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <ListClinics />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
   )

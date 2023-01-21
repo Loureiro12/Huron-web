@@ -7,27 +7,12 @@ export const Container = styled.div`
   display: flex;
   padding: 0 20px;
 `
+
 export const Content = styled.div`
   width: 1120px;
   margin-top: 2.875rem;
 `
 
-export const ContentBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  display: flex;
-  width: 100%;
-  align-items: center;
-`
-export const TextPosition = styled.p`
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 19px;
-
-  color: ${(props) => props.theme['gray-900']};
-`
 export const Text = styled.p`
   font-family: 'Inter';
   font-style: normal;
@@ -43,10 +28,36 @@ export const ContentHeaderPage = styled.div`
   align-items: center;
 `
 
+export const ButtonBack = styled.button`
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: ${(props) => props.theme['gray-900']};
+
+  p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 19px;
+  }
+
+  svg {
+    font-size: 1.75rem;
+  }
+
+  :hover {
+    color: #7c7c7c;
+  }
+`
+
 export const TextHeaderPage = styled.p`
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 19px;
 
@@ -88,12 +99,19 @@ export const TextFloatingBox = styled.p`
 
   color: ${(props) => props.theme['blue-100']};
 `
-export const ButtonBox = styled.button`
-  background: transparent;
-  outline: 0;
-  cursor: pointer;
-  border: 0;
-  transition: 0.4s;
-  cursor: pointer;
-  border-radius: 8px;
+export const TitleBox = styled.p`
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: start;
+  margin-bottom: 31px;
+
+  color: ${(props) => props.theme['gray-900']};
+`
+export const WrapperInput = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-bottom: 21px;
 `
