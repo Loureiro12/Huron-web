@@ -1,7 +1,13 @@
-import { FloatingBox } from '../../components/FloatingBox'
-import { Header } from '../../components/Header'
+import { useNavigate } from 'react-router-dom'
+
 import LogoutIcon from '@mui/icons-material/Logout'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+
+import { FloatingBox } from '../../components/FloatingBox'
+import { Header } from '../../components/Header'
+import { Box } from '../../components/Box'
+import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
 
 import {
   Container,
@@ -15,18 +21,15 @@ import {
   WrapperInput,
 } from './styles'
 
-import { Box } from '../../components/Box'
-import { Input } from '../../components/Input'
-import { Button } from '../../components/Button'
-
 export function CreateClinic() {
+  const navigate = useNavigate()
   return (
     <>
       <Header />
       <Container>
         <Content>
           <ContentHeaderPage>
-            <ButtonBack>
+            <ButtonBack onClick={() => navigate('/list-clinics')}>
               <KeyboardArrowLeftIcon />
               <p>Voltar</p>
             </ButtonBack>
@@ -56,6 +59,7 @@ export function CreateClinic() {
               text="Continuar"
               styleButton={{ mg: '32px 0px 0px 0px' }}
               type="button"
+              onClick={() => navigate('/medical-record')}
             />
           </Box>
         </Content>

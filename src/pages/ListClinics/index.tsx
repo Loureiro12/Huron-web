@@ -1,17 +1,18 @@
 import React from 'react'
-import { Box } from '../../components/Box'
-import { Button } from '../../components/Button'
-import { FloatingBox } from '../../components/FloatingBox'
-import { Header } from '../../components/Header'
+import { useNavigate } from 'react-router-dom'
 import LogoutIcon from '@mui/icons-material/Logout'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
-
 import { styled, alpha } from '@mui/material/styles'
 import Menu, { MenuProps } from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import DeleteIcon from '@mui/icons-material/Delete'
 import CheckIcon from '@mui/icons-material/Check'
 import EditIcon from '@mui/icons-material/Edit'
+
+import { Box } from '../../components/Box'
+import { Button } from '../../components/Button'
+import { FloatingBox } from '../../components/FloatingBox'
+import { Header } from '../../components/Header'
 
 import {
   Container,
@@ -70,6 +71,8 @@ const StyledMenu = styled((props: MenuProps) => (
 }))
 
 export function ListClinics() {
+  const navigate = useNavigate()
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -85,7 +88,11 @@ export function ListClinics() {
         <Content>
           <ContentHeaderPage>
             <TextHeaderPage>Clinicas Cadastradas</TextHeaderPage>
-            <Button text="Criar nova" />
+            <Button
+              text="Criar nova"
+              type="button"
+              onClick={() => navigate('/create-clinic')}
+            />
           </ContentHeaderPage>
           <Box style={{ mg: '1.375rem 0rem' }}>
             <ContentBox>

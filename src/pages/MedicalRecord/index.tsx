@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import LogoutIcon from '@mui/icons-material/Logout'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import AddIcon from '@mui/icons-material/Add'
@@ -23,6 +25,8 @@ import {
 } from './styles'
 
 export function MedicalRecord() {
+  const navigate = useNavigate()
+
   const handleClickNewDoctor = () => {
     console.log('Adiciona mais um campo de médico')
   }
@@ -32,7 +36,7 @@ export function MedicalRecord() {
       <Container>
         <Content>
           <ContentHeaderPage>
-            <ButtonBack>
+            <ButtonBack onClick={() => navigate('/create-clinic')}>
               <KeyboardArrowLeftIcon />
               <p>Voltar</p>
             </ButtonBack>
