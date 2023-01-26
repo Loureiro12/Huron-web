@@ -2,19 +2,22 @@ import styled from 'styled-components'
 import { Input } from '../../components/Input'
 
 export const Container = styled.div`
-  height: 100vh;
   justify-content: center;
   text-align: center;
   display: flex;
   align-items: center;
   background-color: ${(props) => props.theme['blue-100']};
+
+  @media (min-width: 700px) {
+    height: 100vh;
+  }
 `
 export const Content = styled.div`
   justify-content: center;
   background-color: white;
+  margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 export const Header = styled.header`
@@ -42,7 +45,7 @@ export const Caption = styled.h2`
 export const Line = styled.div`
   width: 100%;
   height: 1px;
-  background-color: #dfdfdf;
+  background-color: ${(props) => props.theme['gray-300']};
   margin-top: 10px;
   margin-bottom: 10px;
 `
@@ -54,8 +57,8 @@ export const CreateAccount = styled.button`
   background-color: transparent;
   font-size: 0.75rem;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
   color: ${(props) => props.theme['blue-100']};
-
   :hover {
     color: ${(props) => props.theme['blue-200']};
   }
@@ -65,47 +68,43 @@ export const InputEmail = styled(Input)`
   margin-bottom: 15px;
 `
 export const InputPassword = styled(Input)`
-  margin-bottom: 5px;
-`
-export const RecoverPassword = styled.div`
-  text-align: end;
   margin-bottom: 30px;
-  margin-top: 5px;
+`
+export const ContainerNameUser = styled.div`
+  justify-content: space-between;
+  margin-bottom: 15px;
 
-  a {
-    color: ${(props) => props.theme['gray-900']};
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
+  @media (min-width: 700px) {
+    display: flex;
   }
+`
 
-  a:hover {
-    color: ${(props) => props.theme['gray-700']};
+export const Separator = styled.div`
+  margin: 15px 0;
+  @media (min-width: 700px) {
+    margin: 0 5px;
   }
 `
 export const Terms = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 
   a {
-    color: ${(props) => props.theme.white};
+    color: ${(porps) => porps.theme['gray-50']};
     text-decoration: none;
     font-size: 0.75rem;
     font-family: 'Inter', sans-serif;
   }
 
   p {
-    color: ${(props) => props.theme.white};
+    color: ${(porps) => porps.theme['gray-50']};
     text-decoration: none;
     font-size: 0.75rem;
-    margin: 0 0.625rem;
-    font-family: 'Inter', sans-serif;
+    margin: 0 10px;
   }
 
   a:hover {
-    color: #dfdfdf;
+    color: ${(props) => props.theme['gray-300']};
   }
 `
 export const BackButton = styled.button`
@@ -124,14 +123,8 @@ export const BackButton = styled.button`
   background: transparent;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.5;
-
   @media (max-width: 780px) {
     top: 20px;
     left: 10px;
-  }
-
-  :hover {
-    color: ${(props) => props.theme['gray-300']};
   }
 `

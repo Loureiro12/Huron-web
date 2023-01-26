@@ -48,7 +48,11 @@ export function SignIn() {
               <RecoverPassword>
                 <NavLink to="/recover-password">Esqueci minha senha</NavLink>
               </RecoverPassword>
-              <Button text="Entrar" />
+              <Button
+                text="Entrar"
+                type="button"
+                onClick={() => navigate('/list-clinics')}
+              />
               <Line />
               <CreateAccount onClick={handleOnClickSignUp}>
                 Não tem uma conta? Criar aqui

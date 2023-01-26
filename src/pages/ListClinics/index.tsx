@@ -132,7 +132,7 @@ export function ListClinics() {
         </Content>
       </Container>
       <FloatingBox>
-        <ContainerFloatingBox>
+        <ContainerFloatingBox onClick={() => navigate('/')}>
           <LogoutIcon />
           <TextFloatingBox>Sair</TextFloatingBox>
         </ContainerFloatingBox>

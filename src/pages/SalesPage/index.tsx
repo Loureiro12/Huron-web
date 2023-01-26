@@ -38,7 +38,7 @@ export function SalesPage() {
               <button onClick={handleOnClick}>Entrar</button>
             </ContentButton>
           </Header>
-          <Information>
+          <Information onClick={() => navigate('/')}>
             <div>
               <Title>Transforme a gestão da sua clínica</Title>
               <LearnMoreButton>Get Quote Now</LearnMoreButton>

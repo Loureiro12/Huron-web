@@ -65,7 +65,7 @@ export function CreateClinic() {
         </Content>
       </Container>
       <FloatingBox>
-        <ContainerFloatingBox>
+        <ContainerFloatingBox onClick={() => navigate('/')}>
           <LogoutIcon />
           <TextFloatingBox>Sair</TextFloatingBox>
         </ContainerFloatingBox>
