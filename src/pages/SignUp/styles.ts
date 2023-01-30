@@ -107,24 +107,3 @@ export const Terms = styled.div`
     color: ${(props) => props.theme['gray-300']};
   }
 `
-export const BackButton = styled.button`
-  position: fixed;
-  z-index: 997;
-  left: 90px;
-  top: 60px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: ${(props) => props.theme['gray-50']};
-  font-family: 'Inter', sans-serif;
-  border-radius: 0px 0px 8px 8px;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  @media (max-width: 780px) {
-    top: 20px;
-    left: 10px;
-  }
-`

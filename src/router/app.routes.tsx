@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { About } from '../pages/About'
 import { CreateClinic } from '../pages/CreateClinic'
 import { ListClinics } from '../pages/ListClinics'
 import { MedicalRecord } from '../pages/MedicalRecord'
@@ -15,6 +16,7 @@ export function AppRoutes() {
         <Route path="/medical-record" element={<MedicalRecord />} />
 
         <Route path="/" element={<SalesPage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Route>

@@ -1,12 +1,8 @@
-import { useCallback } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { HeaderUnauthenticated } from '../../components/HeaderUnauthenticated'
 import {
   Container,
-  Header,
   Content,
-  ContentOptions,
-  ContentButton,
-  Brand,
   Information,
   Title,
   LearnMoreButton,
@@ -16,28 +12,11 @@ import {
 export function SalesPage() {
   const navigate = useNavigate()
 
-  const handleOnClick = useCallback(
-    () => navigate('/login', { replace: true }),
-    [navigate],
-  )
-
   return (
     <Container>
       <Content>
         <div>
-          <Header>
-            <Brand>Huron</Brand>
-            <ContentOptions>
-              <a>Home</a>
-              <a>Sobre</a>
-              <a>Preço</a>
-              <a>Contato</a>
-            </ContentOptions>
-            <ContentButton>
-              <NavLink to="/signup">Cadastrar-se</NavLink>
-              <button onClick={handleOnClick}>Entrar</button>
-            </ContentButton>
-          </Header>
+          <HeaderUnauthenticated />
           <Information onClick={() => navigate('/')}>
             <div>
               <Title>Transforme a gestão da sua clínica</Title>

@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 
 import { NavLink, useNavigate } from 'react-router-dom'
 
@@ -17,7 +16,6 @@ import {
   InputPassword,
   RecoverPassword,
   Terms,
-  BackButton,
 } from './styles'
 
 export function SignIn() {
@@ -28,11 +26,6 @@ export function SignIn() {
   )
   return (
     <>
-      <BackButton onClick={() => navigate('/')}>
-        <ArrowBackIosIcon />
-        <p>Voltar</p>
-      </BackButton>
-
       <Container>
         <div style={{ margin: 10, width: 400 }}>
           <Content>
